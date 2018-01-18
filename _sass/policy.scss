@@ -1,0 +1,30 @@
+/**
+ * Lists of children
+ */
+.child-list {
+  margin-left: 0;
+  list-style: none;
+
+  > li {
+    margin-bottom: $spacing-unit;
+  }
+
+  h2 {
+    line-height: 1;
+    margin-bottom: 0;
+  }
+}
+
+.child-link {
+  display: block;
+  @include relative-font-size(1.2);
+}
+
+.child-meta {
+  font-size: $small-font-size;
+  color: $grey-color;
+}
+
+.child-excerpt {
+  margin-top: $spacing-unit * 0.25;
+}

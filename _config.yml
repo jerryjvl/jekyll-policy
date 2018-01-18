@@ -1,0 +1,36 @@
+
+# Standard site identity details
+title: Example-Corp Policies
+email: your-email@example.com
+description: >-
+  Modular corporate policy framework, built on Git, Markdown and Jekyll
+  to make policies both transparent to inspection, discussion and challenge
+  as well as easier to adopt, adapt and modify over time.
+baseurl: ""
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: jerryjvl
+github_username:  jerryjvl
+timezone: America/Los_Angeles
+
+# Standard build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+
+# Additional build settings for jekyll-policy
+header_pages: [index.md, content/blog.md, content/glossary.md, README.md]
+strict_front_matter: true
+collections_dir: content
+liquid:
+  error_mode: strict
+redcarpet:
+  extensions: [smart]
+# smart = smartypants for smart quotes and en/em dashes from runs of ---
+# tables = parse tables
+# no_intra_emphasis = ignore _ inside words for <em>
+# autolink = hyperlink anything that looks like a link in the text
+# strikethrough = ~~ around text makes it strike-through
+# superscript = ^(xxx) turns xxx into a super-script
+# highlight = == around text marks it for highlighting
+# footnotes = parse footnotes [^1] marker, and [^1]: xxx anywhere else
