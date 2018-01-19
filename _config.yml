@@ -13,7 +13,7 @@ github_username:  jerryjvl
 timezone: America/Los_Angeles
 
 # Standard build settings
-markdown: kramdown
+markdown: redcarpet # kramdown
 theme: minima
 plugins:
   - jekyll-feed
@@ -22,15 +22,14 @@ plugins:
 header_pages: [index.md, content/blog.md, content/glossary.md, README.md]
 strict_front_matter: true
 collections_dir: content
+data_dir: content/_data
 liquid:
   error_mode: strict
 redcarpet:
-  extensions: [smart]
-# smart = smartypants for smart quotes and en/em dashes from runs of ---
-# tables = parse tables
-# no_intra_emphasis = ignore _ inside words for <em>
-# autolink = hyperlink anything that looks like a link in the text
-# strikethrough = ~~ around text makes it strike-through
-# superscript = ^(xxx) turns xxx into a super-script
-# highlight = == around text marks it for highlighting
-# footnotes = parse footnotes [^1] marker, and [^1]: xxx anywhere else
+  extensions:
+    - smart
+    - no_intra_emphasis
+    - autolink
+    - tables
+    - superscript # ^(xx) superscripts 'xx'
+    - highlight # == around text marks it as highlighted

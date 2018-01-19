@@ -28,3 +28,32 @@
 .child-excerpt {
   margin-top: $spacing-unit * 0.25;
 }
+
+.child-list-condensed {
+  margin-left: 0;
+  list-style: none;
+
+  > li {
+    margin-bottom: $spacing-unit * 0.5;
+  }
+
+  h2 {
+    line-height: 1;
+    margin-bottom: 0;
+  }
+}
+
+.child-link-condensed {
+  display: block;
+  @include relative-font-size(1.0);
+}
+
+.child-meta-condensed {
+  color: $grey-color;
+  @include relative-font-size(0.8);
+}
+
+.child-excerpt-condensed {
+  margin-top: $spacing-unit * 0.1;
+  @include relative-font-size(0.8);
+}

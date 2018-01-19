@@ -1,0 +1,30 @@
+---
+layout: default
+---
+<article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title | escape }}</h1>
+  </header>
+
+  <div class="post-content">
+    {{ content }}
+    
+    <table>
+      <thead>
+        <tr>
+          <th style="text-align: left">Title</th>
+          <th style="text-align: left">Category</th>
+        </tr>
+      </thead>
+      {% assign order_sorted = page.descendants | group_by:"order" | sort:"name" %}
+      <tbody>{% for group in order_sorted %}{% assign title_sorted = group.items | sort:"title" %}{% for criterion in title_sorted %}
+        <tr>
+          <td style="text-align: left"><a href="{{ criterion.url }}">{{ criterion.title }}</a></td>
+          <td style="text-align: left">{{ criterion.category }}</td>
+        </tr>{% endfor %}{% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+</article>
